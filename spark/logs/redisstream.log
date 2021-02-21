@@ -1,0 +1,15 @@
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++--------------------+---------+
+|               email|birthYear|
++--------------------+---------+
+| zimmy.torn@test.com|     2010|
+|Edward.Hansen@tes...|     1965|
+|   Danny.Wu@test.com|     1963|
+|Santosh.Smith@tes...|     1962|
+|Dan.Jackson@test.com|     1961|
+|  Lyn.Mitra@test.com|     1959|
+|Senthil.Lincoln@t...|     1958|
++--------------------+---------+
+

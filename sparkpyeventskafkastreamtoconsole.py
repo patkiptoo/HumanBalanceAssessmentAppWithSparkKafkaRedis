@@ -55,6 +55,7 @@ customerRiskStreamingDF=spark.sql("select customer,score from CustomerRisk")
 # |Spencer.Davis@tes...| 8.0|
 # +--------------------+-----
 customerRiskStreamingDF.writeStream.outputMode("append").format("console").start().awaitTermination()
+#
 #redisCustomerRiskDF.writeStream.outputMode("append").format("console").start().awaitTermination()
 # Run the python script by running the command from the terminal:
 # /home/workspace/submit-event-kafka-streaming.sh

@@ -142,6 +142,7 @@ emailAndBirthYearStreamingDF=emailAndBirthDayStreamingDF.select("email",split(em
 # |Sean.Howard@test.com|1958|
 # |Sarah.Clark@test.com|1957|
 # +--------------------+-----
+#
 emailAndBirthYearStreamingDF.writeStream.outputMode("append").format("console").start().awaitTermination()
 
 # Run the python script by running the command from the terminal:

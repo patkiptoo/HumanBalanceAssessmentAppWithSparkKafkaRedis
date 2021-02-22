@@ -164,7 +164,6 @@ customerInfoAndRiskDF=customerRiskStreamingDF.join(emailAndBirthYearStreamingDF,
 # |Sarah.Lincoln@tes...| -2.0|Sarah.Lincoln@tes...|     1959|
 # |Sarah.Clark@test.com| -4.0|Sarah.Clark@test.com|     1957|
 # +--------------------+-----+--------------------+---------+
-#
 # In this JSON Format {"customer":"Santosh.Fibonnaci@test.com","score":"28.5","email":"Santosh.Fibonnaci@test.com","birthYear":"1963"}
 customerInfoAndRiskDF.selectExpr("CAST(customer as STRING) AS key", "to_json(struct(*)) AS value")\
     .writeStream\

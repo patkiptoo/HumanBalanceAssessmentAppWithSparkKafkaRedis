@@ -173,3 +173,4 @@ customerInfoAndRiskDF.selectExpr("CAST(customer as STRING) AS key", "to_json(str
     .option("checkpointLocation","/tmp/kafkacheckpoint")\
     .start()\
     .awaitTermination()
+    

@@ -129,7 +129,6 @@ emailAndBirthDayStreamingDF=spark.sql("select email, birthDay from CustomerRecor
 emailAndBirthYearStreamingDF=emailAndBirthDayStreamingDF.select("email",split(emailAndBirthDayStreamingDF.birthDay,"-").getItem(0).alias("birthYear"))
 
 # Sinking the emailAndBirthYearStreamingDF dataframe to the console in append mode
-# 
 # The output should look like this:
 # +--------------------+-----               
 # | email         |birthYear|
@@ -144,7 +143,6 @@ emailAndBirthYearStreamingDF=emailAndBirthDayStreamingDF.select("email",split(em
 # +--------------------+-----
 #
 emailAndBirthYearStreamingDF.writeStream.outputMode("append").format("console").start().awaitTermination()
-
 # Run the python script by running the command from the terminal:
 # /home/workspace/submit-redis-kafka-streaming.sh
 # Ideally verifying the data looks correct 
